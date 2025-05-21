@@ -3,28 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguridad Privada O.R.O</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Seguridad Privada Asesorías y Capacitación O.R.O ofrece servicios de vigilancia profesional, capacitación especializada y asesorías en seguridad para empresas y particulares.">
+    <meta name="keywords" content="seguridad privada, vigilancia, capacitación, asesoría, O.R.O, seguridad">
+    <meta name="author" content="O.R.O Seguridad">
+    <meta name="robots" content="index, follow">
+    
+    <title>Seguridad Privada Asesorías y Capacitación O.R.O</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/css/styles.min.css" as="style">
+    <link rel="preload" href="assets/images/logo.svg" as="image">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo-container">
-            <div class="shield">
-                <div class="shield-border"></div>
-                <div class="shield-inner">
-                    <div class="top-text">SEGURIDAD PRIVADA</div>
-                    <div class="star">★</div>
-                    <div class="three-lines">III</div>
-                    <div class="mountains">
-                        <div class="mountain-left"></div>
-                        <div class="mountain-center"></div>
-                        <div class="mountain-right"></div>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Logo O.R.O" width="60" height="60" loading="eager">
+                <h1>SEGURIDAD PRIVADA ASESORÍAS Y CAPACITACIÓN O.R.O</h1>
+            </div>
+            <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú de navegación">☰</button>
+            <nav>
+                <ul id="mainMenu" class="">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Soluciones de Seguridad Profesionales</h2>
+            <p>Ofrecemos servicios de vigilancia privada, asesorías y capacitación de la más alta calidad para proteger lo que más valora.</p>
+            <a href="#contacto" class="btn">Contáctenos</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>Vigilancia Privada</h3>
+                        <p>Ofrecemos servicios de vigilancia profesional para empresas, residencias y eventos. Nuestro personal está altamente capacitado para garantizar la seguridad de sus instalaciones y personal.</p>
                     </div>
-                    <div class="bottom-text">ASESORÍA Y CAPACITACIÓN</div>
-                    <div class="company-name">O.R.O</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>Capacitación</h3>
+                        <p>Programas de capacitación especializados en seguridad para formar a su personal con las mejores prácticas y técnicas del sector. Cursos adaptados a las necesidades específicas de cada cliente.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>Asesorías</h3>
+                        <p>Consultoría experta en seguridad para evaluar riesgos, implementar protocolos y optimizar sus sistemas de protección. Soluciones personalizadas para cada tipo de negocio.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </section>
+
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotros</h2>
+            </div>
+            <div class="about-content">
+                <div>
+                    <p>En SEGURIDAD PRIVADA ASESORÍAS Y CAPACITACIÓN O.R.O nos dedicamos a proporcionar soluciones integrales de seguridad que se adaptan a las necesidades específicas de cada cliente.</p>
+                    <p>Con años de experiencia en el sector, nuestro equipo de profesionales altamente capacitados trabaja con el compromiso de ofrecer servicios de la más alta calidad, garantizando la tranquilidad y protección que usted y su organización merecen.</p>
+                    <p>Nuestra misión es convertirnos en su aliado estratégico en materia de seguridad, ofreciendo soluciones innovadoras y efectivas que le permitan enfocarse en lo que realmente importa: el crecimiento de su negocio.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/logo.svg" alt="Sobre O.R.O" width="300" height="300" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestro Equipo</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-info">
+                        <h3>Director General</h3>
+                        <p>Liderazgo y Estrategia</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-info">
+                        <h3>Jefe de Operaciones</h3>
+                        <p>Coordinación de Servicios</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-info">
+                        <h3>Director de Capacitación</h3>
+                        <p>Formación Especializada</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-info">
+                        <h3>Consultor Senior</h3>
+                        <p>Asesoría Estratégica</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"El servicio de vigilancia proporcionado por O.R.O ha superado todas nuestras expectativas. Su profesionalismo y atención al detalle han mejorado significativamente la seguridad de nuestras instalaciones."</p>
+                    <div class="testimonial-author">Empresa de Manufactura</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galería</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/gallery1.jpg" alt="Imagen de galería 1" width="300" height="200" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery2.jpg" alt="Imagen de galería 2" width="300" height="200" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery3.jpg" alt="Imagen de galería 3" width="300" height="200" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery4.jpg" alt="Imagen de galería 4" width="300" height="200" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-detail">
+                        <i class="icon" aria-hidden="true">📱</i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p id="phone-placeholder">(Teléfono pendiente)</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="icon" aria-hidden="true">✉️</i>
+                        <div>
+                            <h4>Correo Electrónico</h4>
+                            <p id="email-placeholder">(Correo pendiente)</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="icon" aria-hidden="true">📍</i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p id="address-placeholder">(Dirección pendiente)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envíenos un Mensaje</h3>
+                    <form id="contactForm" method="post" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Blog y Noticias</h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">Mayo 2025</span>
+                        <h3>Nuevas Tendencias en Seguridad Privada</h3>
+                        <p>Descubra las últimas innovaciones y tendencias en el sector de la seguridad privada y cómo pueden beneficiar a su organización.</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">Abril 2025</span>
+                        <h3>La Importancia de la Capacitación en Seguridad</h3>
+                        <p>Un personal bien capacitado es fundamental para garantizar la efectividad de cualquier sistema de seguridad. Conozca por qué.</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">Marzo 2025</span>
+                        <h3>Cómo Evaluar los Riesgos de Seguridad en su Empresa</h3>
+                        <p>Guía práctica para identificar vulnerabilidades y establecer protocolos efectivos de seguridad en su organización.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>SEGURIDAD PRIVADA O.R.O</h3>
+                    <p>Soluciones integrales de seguridad, asesoría y capacitación para proteger lo que más valora.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#servicios">Vigilancia Privada</a></li>
+                        <li><a href="#servicios">Capacitación</a></li>
+                        <li><a href="#servicios">Asesorías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© <span id="current-year">2025</span> SEGURIDAD PRIVADA ASESORÍAS Y CAPACITACIÓN O.R.O. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Menú móvil
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mainMenu').classList.toggle('show');
+        });
+        
+        // Actualizar año actual en el copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Validación básica del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            const requiredFields = this.querySelectorAll('[required]');
+            
+            // Verificar campos requeridos
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    valid = false;
+                } else {
+                    field.classList.remove('error');
+                }
+            });
+            
+            // Validar formato de correo electrónico
+            const emailField = document.getElementById('email');
+            if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                emailField.classList.add('error');
+                valid = false;
+            }
+            
+            if (valid) {
+                // En una implementación real, aquí enviarías los datos al servidor
+                alert('Mensaje enviado con éxito. Nos contactaremos a la brevedad.');
+                this.reset();
+            } else {
+                alert('Por favor, complete todos los campos requeridos correctamente.');
+            }
+        });
+        
+        // Cargar información de contacto (simulado - esto se reemplazará con datos reales)
+        function updateContactInfo() {
+            // Aquí normalmente cargarías los datos desde una API o archivo de configuración
+            // Por ahora, simplemente dejamos los espacios marcados como pendientes
+            // document.getElementById('phone-placeholder').textContent = "+56 9 1234 5678";
+            // document.getElementById('email-placeholder').textContent = "contacto@seguridadoro.cl";
+            // document.getElementById('address-placeholder').textContent = "Av. Principal 123, La Serena, Chile";
+        }
+        
+        // Ejecutar cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            updateContactInfo();
+            
+            // Lazy loading para imágenes fuera de la vista inicial
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const image = entry.target;
+                            image.src = image.dataset.src || image.src;
+                            observer.unobserve(image);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(image => {
+                    imageObserver.observe(image);
+                });
+            }
+        });
