@@ -9,7 +9,6 @@
     --white: #ffffff;
     --light-gray: #f5f5f5;
     --dark-gray: #333333;
-    --font-family: 'Poppins', sans-serif;
 }
 
 /* Reset básico */
@@ -21,7 +20,7 @@
 
 /* Base */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
     color: var(--dark-gray);
@@ -393,7 +392,7 @@ section:nth-child(even) {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: inherit;
 }
 
 .form-group textarea {
