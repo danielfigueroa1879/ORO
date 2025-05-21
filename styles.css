@@ -1,8 +1,10 @@
 .about-content div p {
     text-align: justify;
-}.footer-col p {
+}
+.footer-col p {
     text-align: justify;
-}/* Variables globales */
+}
+/* Variables globales */
 :root {
     --primary-color: #283593;
     --secondary-color: #D4AF37;
@@ -462,6 +464,9 @@ footer {
     color: var(--secondary-color);
     margin-top: 0;
     margin-bottom: 20px;
+    font-size: a(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
     font-size: 1.2rem;
 }
 
@@ -568,6 +573,7 @@ footer {
         display: block;
         width: 100%;
         transition: all 0.2s ease;
+        font-weight: 400; /* Menos negrilla en el menú móvil */
     }
     
     nav ul li a:hover {
@@ -612,12 +618,51 @@ footer {
     .logo h1 {
         font-size: 1.1rem; /* Título más pequeño específicamente en celular */
     }
+    
+    /* Texto general más pequeño y menos negrilla en móvil */
+    body {
+        font-size: 0.95rem;
+        font-weight: 300; /* Menos negrilla en todo el texto */
+    }
+    
+    p {
+        font-size: 0.95rem;
+        font-weight: 300; /* Menos negrilla en párrafos */
+    }
+    
+    /* Centrado de la sección equipo en móvil */
+    .team {
+        text-align: center;
+    }
+    
+    .team-info {
+        text-align: center;
+    }
+    
+    .team-info h3 {
+        text-align: center;
+    }
+    
+    .team-info p {
+        text-align: center;
+        font-weight: 400; /* Menos negrita */
+        font-size: 0.95rem;
+    }
+    
+    .service-content p, 
+    .about-content div p, 
+    .testimonial p,
+    .blog-content p,
+    .contact-detail p {
+        font-size: 0.95rem; /* Texto un poco más pequeño */
+        font-weight: 300; /* Menos negrilla en todos los textos */
+    }
 }
 
 @media (max-width: 576px) {
     .hero {
         padding: 150px 20px 80px; /* Ajustado para el header más alto */
-        margin-top: 95px; /* Ajustado para el header más alto */
+        margin-top: 80px; /* Ajustado para el header más alto */
     }
     
     .section-title h2 {
@@ -634,6 +679,22 @@ footer {
     
     .logo h1 {
         font-size: 0.9rem; /* Más pequeño para celulares muy pequeños */
+    }
+    
+    /* Texto aún más pequeño en celulares muy pequeños */
+    body {
+        font-size: 0.9rem;
+        font-weight: 300; /* Menos negrilla */
+    }
+    
+    p, .service-content p, 
+    .about-content div p, 
+    .testimonial p,
+    .blog-content p,
+    .team-info p,
+    .contact-detail p {
+        font-size: 0.9rem;
+        font-weight: 300; /* Menos negrilla */
     }
 }
 
