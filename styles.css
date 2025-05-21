@@ -263,16 +263,19 @@ section:nth-child(even) {
 
 .team-info {
     padding: 20px;
+    text-align: center; /* Centrar todo el contenido */
 }
 
 .team-info h3 {
     margin-top: 0;
     color: var(--primary-color);
+    text-align: center; /* Asegurar que los títulos estén centrados */
 }
 
 .team-info p {
     color: var(--secondary-color);
-    font-weight: 500;
+    font-weight: 400; /* Peso normal en lugar de negrita */
+    text-align: center; /* Asegurar que las descripciones estén centradas */
 }
 
 /* Sección Testimonios */
@@ -610,7 +613,7 @@ footer {
     }
     
     .logo h1 {
-        font-size: 1.3rem; /* Título un poco más pequeño que antes */
+        font-size: 1.1rem; /* Título más pequeño específicamente en celular */
     }
 }
 
@@ -633,7 +636,7 @@ footer {
     }
     
     .logo h1 {
-        font-size: 1.1rem; /* Un poco más pequeño para celulares pequeños */
+        font-size: 0.9rem; /* Más pequeño para celulares muy pequeños */
     }
 }
 
