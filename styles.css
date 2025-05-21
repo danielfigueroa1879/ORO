@@ -610,7 +610,7 @@ footer {
     }
     
     .logo h1 {
-        font-size: 1.3rem; /* Título un poco más pequeño que antes */
+        font-size: 1.1rem; /* Título más pequeño específicamente en celular */
     }
 }
 
@@ -633,7 +633,7 @@ footer {
     }
     
     .logo h1 {
-        font-size: 1.3rem; /* Ajustado pero sigue siendo más grande */
+        font-size: 0.9rem; /* Más pequeño para celulares muy pequeños */
     }
 }
 
