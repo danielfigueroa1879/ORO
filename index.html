@@ -295,7 +295,19 @@
     <script>
         // Menú móvil
         document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('mainMenu').classList.toggle('show');
+            var menu = document.getElementById('mainMenu');
+            menu.classList.toggle('show');
+            
+            // Añadir listener para cerrar el menú cuando se hace clic en un enlace
+            var menuLinks = menu.querySelectorAll('a');
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', function() {
+                    // Pequeño retraso para permitir la navegación antes de cerrar el menú
+                    setTimeout(function() {
+                        menu.classList.remove('show');
+                    }, 300);
+                });
+            }
         });
         
         // Actualizar año actual en el copyright
