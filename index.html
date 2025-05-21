@@ -37,6 +37,7 @@
                     <li><a href="#blog">Blog</a></li>
                 </ul>
             </nav>
+            <div id="menuOverlay" class="menu-overlay"></div>
         </div>
     </header>
 
@@ -293,22 +294,44 @@
 
     <!-- Scripts -->
     <script>
-        // Script simplificado para el menú móvil
+        // Script mejorado para el menú móvil con cierre al hacer clic en cualquier parte
         document.addEventListener('DOMContentLoaded', function() {
             var menuButton = document.getElementById('menuToggle');
             var mainMenu = document.getElementById('mainMenu');
+            var menuOverlay = document.getElementById('menuOverlay');
+            
+            // Función para abrir/cerrar el menú
+            function toggleMenu() {
+                mainMenu.classList.toggle('show');
+                menuOverlay.classList.toggle('active');
+                // Cambiar el ícono del botón (opcional)
+                menuButton.innerHTML = mainMenu.classList.contains('show') ? '✕' : '☰';
+            }
             
             // Evento para mostrar/ocultar el menú móvil
-            menuButton.addEventListener('click', function() {
-                mainMenu.classList.toggle('show');
+            menuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleMenu();
+            });
+            
+            // Evento para cerrar el menú al hacer clic en el overlay
+            menuOverlay.addEventListener('click', function() {
+                toggleMenu();
+            });
+            
+            // Evento para cerrar el menú al hacer clic en cualquier parte de la página
+            document.addEventListener('click', function(e) {
+                // Si el clic no fue en el menú ni en el botón del menú, cerrar el menú
+                if (!mainMenu.contains(e.target) && e.target !== menuButton && mainMenu.classList.contains('show')) {
+                    toggleMenu();
+                }
             });
             
             // Evento para cerrar el menú al hacer clic en un enlace
             var links = mainMenu.getElementsByTagName('a');
-            
             for (var i = 0; i < links.length; i++) {
                 links[i].addEventListener('click', function() {
-                    mainMenu.classList.remove('show');
+                    toggleMenu();
                 });
             }
             
