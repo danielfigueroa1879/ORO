@@ -521,11 +521,11 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(40, 53, 147, 0.75); /* Fondo aún más transparente */
+        background-color: rgba(40, 53, 147, 0.55); /* Fondo mucho más transparente */
         padding: 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         z-index: 999;
-        backdrop-filter: blur(3px); /* Efecto de desenfoque sutil */
+        backdrop-filter: blur(2px); /* Efecto de desenfoque mínimo */
     }
     
     nav ul.show {
@@ -536,7 +536,7 @@ footer {
     nav ul li {
         margin: 0;
         text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Líneas aún más sutiles */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07); /* Líneas extremadamente sutiles */
     }
     
     nav ul li:last-child {
