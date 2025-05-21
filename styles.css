@@ -508,6 +508,7 @@ footer {
         position: static;
     }
     
+    /* Menú móvil mejorado con fondo semitransparente */
     nav ul {
         display: none;
         flex-direction: column;
@@ -515,30 +516,54 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--primary-color);
+        background-color: rgba(40, 53, 147, 0.95); /* Fondo semitransparente */
         padding: 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         z-index: 999;
+        backdrop-filter: blur(5px); /* Efecto de desenfoque para mayor profundidad */
     }
     
     nav ul.show {
         display: flex;
+        animation: fadeIn 0.3s ease-out;
     }
     
     nav ul li {
         margin: 0;
         text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Líneas sutiles de separación */
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none; /* Eliminar borde en el último elemento */
     }
     
     nav ul li a {
         padding: 15px;
         display: block;
         width: 100%;
+        transition: all 0.2s ease;
     }
     
     nav ul li a:hover {
         background-color: rgba(255, 255, 255, 0.1);
+        color: var(--secondary-color);
+    }
+    
+    /* Overlay para cerrar el menú al hacer clic en cualquier parte */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: 998;
+    }
+    
+    .menu-overlay.active {
+        display: block;
     }
     
     .about-content,
