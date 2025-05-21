@@ -66,9 +66,7 @@ header {
 
 /* Navegación principal */
 nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
 }
 
 nav ul {
@@ -105,7 +103,6 @@ nav ul li a:hover {
     cursor: pointer;
     padding: 5px 10px;
     z-index: 1001;
-    margin-left: auto;
 }
 
 /* Sección Hero */
@@ -497,21 +494,10 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-    .about-content,
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-image {
-        order: -1;
-    }
-}
-
+/* Media Queries - MENÚ MÓVIL MEJORADO */
 @media (max-width: 768px) {
     .logo h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .mobile-menu-btn {
@@ -519,20 +505,20 @@ footer {
     }
     
     nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        position: static;
     }
     
     nav ul {
         display: none;
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
         background-color: var(--primary-color);
         padding: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        margin-top: 0;
+        z-index: 999;
     }
     
     nav ul.show {
@@ -541,19 +527,27 @@ footer {
     
     nav ul li {
         margin: 0;
-        width: 100%;
         text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     nav ul li a {
-        display: block;
         padding: 15px;
-        font-size: 1.1rem;
+        display: block;
+        width: 100%;
     }
     
     nav ul li a:hover {
         background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
     }
     
     .hero h2 {
@@ -568,6 +562,18 @@ footer {
     
     .section-title h2 {
         font-size: 1.8rem;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 1.8rem;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .logo h1 {
+        font-size: 0.8rem;
     }
 }
 
