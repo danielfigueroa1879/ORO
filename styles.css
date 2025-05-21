@@ -263,19 +263,16 @@ section:nth-child(even) {
 
 .team-info {
     padding: 20px;
-    text-align: center; /* Centrar todo el contenido */
 }
 
 .team-info h3 {
     margin-top: 0;
     color: var(--primary-color);
-    text-align: center; /* Asegurar que los títulos estén centrados */
 }
 
 .team-info p {
     color: var(--secondary-color);
-    font-weight: 400; /* Peso normal en lugar de negrita */
-    text-align: center; /* Asegurar que las descripciones estén centradas */
+    font-weight: 500;
 }
 
 /* Sección Testimonios */
