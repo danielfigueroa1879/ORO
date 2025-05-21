@@ -14,9 +14,11 @@
         font-weight: 300;
     }.about-content div p {
     text-align: justify;
+    font-weight: 300; /* Texto más ligero */
 }
 .footer-col p {
     text-align: justify;
+    font-weight: 300; /* Texto más ligero */
 }
 /* Variables globales */
 :root {
@@ -41,11 +43,13 @@ body {
     padding: 0;
     color: var(--dark-gray);
     line-height: 1.6;
+    font-weight: 300; /* Texto más ligero en general */
 }
 
 /* Justificación de texto para todos los párrafos */
 p {
     text-align: justify;
+    font-weight: 300; /* Texto más ligero */
 }
 
 .container {
@@ -108,7 +112,7 @@ nav ul li {
 nav ul li a {
     color: var(--white);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400; /* Menos negrita */
     transition: color 0.3s;
     padding: 8px 0;
     display: block;
@@ -159,7 +163,7 @@ nav ul li a:hover {
     padding: 12px 30px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500; /* Reducido de 600 */
     transition: background-color 0.3s;
     border: none;
     cursor: pointer;
@@ -237,6 +241,7 @@ section:nth-child(even) {
 
 .service-content p {
     text-align: justify;
+    font-weight: 300; /* Texto más ligero */
 }
 
 /* Sección Sobre Nosotros */
@@ -288,7 +293,7 @@ section:nth-child(even) {
 
 .team-info p {
     color: var(--secondary-color);
-    font-weight: 500;
+    font-weight: 400; /* Menos negrita */
 }
 
 /* Sección Testimonios */
@@ -313,10 +318,11 @@ section:nth-child(even) {
     font-style: italic;
     margin-bottom: 20px;
     text-align: justify;
+    font-weight: 300; /* Texto más ligero */
 }
 
 .testimonial-author {
-    font-weight: 600;
+    font-weight: 500; /* Reducido de 600 */
     color: var(--primary-color);
 }
 
@@ -399,7 +405,7 @@ section:nth-child(even) {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 400; /* Menos negrita */
 }
 
 .form-group input,
@@ -446,11 +452,12 @@ section:nth-child(even) {
 
 .blog-content p {
     text-align: justify;
+    font-weight: 300; /* Texto más ligero */
 }
 
 .blog-date {
     color: var(--secondary-color);
-    font-weight: 500;
+    font-weight: 400; /* Reducido de 500 */
     margin-bottom: 10px;
     display: block;
 }
@@ -529,6 +536,12 @@ footer {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright p {
+    text-align: center; /* Asegurar que el texto esté centrado */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    margin: 0 auto; /* Centrar el bloque */
 }
 
 /* Media Queries - MENÚ MÓVIL MEJORADO */
@@ -715,6 +728,9 @@ footer {
     /* Copyright aún más pequeño en celulares muy pequeños */
     .copyright p {
         font-size: 0.7rem;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
     }
     
     /* Menú hamburguesa aún más grande en celulares muy pequeños */
