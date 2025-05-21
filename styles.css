@@ -1,4 +1,14 @@
-/* Ajustes para el texto del copyright en móvil */
+/* Ajustes para las imágenes de la galería en móvil */
+@media (max-width: 768px) {
+    .gallery-item {
+        height: 200px; /* Altura reducida en móvil */
+    }
+    
+    .gallery-item img {
+        object-fit: contain; /* Asegura que se vea la imagen completa */
+        padding: 10px; /* Añade un poco de espacio alrededor */
+    }
+}    /* Ajustes para el texto del copyright en móvil */
     .copyright p {
         font-size: 0.75rem; /* Letra más pequeña en el copyright */
         font-weight: 300;
