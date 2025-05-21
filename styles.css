@@ -1,4 +1,8 @@
-.about-content div p {
+/* Ajustes para el texto del copyright en móvil */
+    .copyright p {
+        font-size: 0.75rem; /* Letra más pequeña en el copyright */
+        font-weight: 300;
+    }.about-content div p {
     text-align: justify;
 }
 .footer-col p {
@@ -574,6 +578,7 @@ footer {
         width: 100%;
         transition: all 0.2s ease;
         font-weight: 400; /* Menos negrilla en el menú móvil */
+        font-size: 1.1rem; /* Letra más grande en el menú hamburguesa */
     }
     
     nav ul li a:hover {
@@ -695,6 +700,16 @@ footer {
     .contact-detail p {
         font-size: 0.9rem;
         font-weight: 300; /* Menos negrilla */
+    }
+    
+    /* Copyright aún más pequeño en celulares muy pequeños */
+    .copyright p {
+        font-size: 0.7rem;
+    }
+    
+    /* Menú hamburguesa aún más grande en celulares muy pequeños */
+    nav ul li a {
+        font-size: 1.2rem;
     }
 }
 
