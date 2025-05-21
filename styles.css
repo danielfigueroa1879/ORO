@@ -1,7 +1,7 @@
 /* Variables globales */
 :root {
-    --primary-color: #283593; /* Manteniendo el color original */
-    --secondary-color: #D4AF37; /* Manteniendo el color original */
+    --primary-color: #283593;
+    --secondary-color: #D4AF37;
     --white: #ffffff;
     --light-gray: #f5f5f5;
     --dark-gray: #333333;
@@ -29,11 +29,11 @@ body {
     padding: 0 20px;
 }
 
-/* Cabecera - Haciendo el banner más alto y letras más grandes */
+/* Cabecera */
 header {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 15px 0; /* Aumentado de 10px a 15px para hacer más alto */
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -54,12 +54,12 @@ header {
 }
 
 .logo img {
-    height: 65px; /* Ligeramente más grande */
-    margin-right: 15px;
+    height: 60px;
+    margin-right: 10px;
 }
 
 .logo h1 {
-    font-size: 1.3rem; /* Aumentado de 1.2rem a 1.3rem - solo un poco más grande */
+    font-size: 1.2rem;
     margin: 0;
     color: var(--white);
 }
@@ -113,7 +113,7 @@ nav ul li a:hover {
     color: var(--white);
     text-align: center;
     padding: 150px 20px 100px;
-    margin-top: 85px; /* Ligeramente ajustado para el header más alto */
+    margin-top: 80px;
 }
 
 .hero h2 {
@@ -141,10 +141,10 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #a8860c; /* Más oscuro al pasar el mouse */
+    background-color: #b8960c;
 }
 
-/* Secciones Generales - Oscureciendo colores alternos */
+/* Secciones Generales */
 section {
     padding: 80px 0;
 }
@@ -177,7 +177,7 @@ section:nth-child(even) {
     background-color: var(--secondary-color);
 }
 
-/* Sección Servicios - Oscureciendo fondo */
+/* Sección Servicios */
 .services {
     padding: 80px 0;
     background-color: var(--light-gray);
@@ -193,7 +193,7 @@ section:nth-child(even) {
     background-color: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra más oscura */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -210,26 +210,396 @@ section:nth-child(even) {
     margin-top: 0;
 }
 
-/* El resto del CSS permanece igual, sólo ajustando colores para oscurecer */
+/* Sección Sobre Nosotros */
+.about {
+    padding: 80px 0;
+}
 
-/* Media Queries - Ajustando para la cabecera más grande */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Equipo */
+.team {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.team-info p {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Sección Testimonios */
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Sección Galería */
+.gallery {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Sección Contacto */
+.contact {
+    padding: 80px 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-detail i {
+    margin-right: 15px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #f44336;
+}
+
+/* Sección Blog */
+.blog {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-date {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+/* Pie de Página */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries - MENÚ MÓVIL MEJORADO */
 @media (max-width: 768px) {
     .logo h1 {
-        font-size: 1rem; /* Ajustado para móvil */
+        font-size: 0.9rem;
     }
     
-    /* Ajustando la sección hero para el header más alto */
-    .hero {
-        padding: 130px 20px 80px;
-        margin-top: 80px;
+    .mobile-menu-btn {
+        display: block;
+        transition: all 0.2s ease;
     }
     
-    /* El resto del media query permanece igual */
+    .mobile-menu-btn:active {
+        transform: scale(0.95);
+    }
+    
+    nav {
+        position: static;
+    }
+    
+    /* Menú móvil mejorado con fondo más oscuro */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(40, 40, 60, 0.6); /* Fondo más oscuro y menos transparente */
+        padding: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        backdrop-filter: blur(8px); /* Mayor efecto de desenfoque para el fondo */
+        -webkit-backdrop-filter: blur(8px); /* Para soporte en Safari */
+    }
+    
+    nav ul.show {
+        display: flex;
+        animation: fadeIn 0.2s ease-out;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07); /* Líneas extremadamente sutiles */
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none; /* Eliminar borde en el último elemento */
+    }
+    
+    nav ul li a {
+        padding: 15px;
+        display: block;
+        width: 100%;
+        transition: all 0.2s ease;
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.07);
+        color: var(--secondary-color);
+    }
+    
+    /* Overlay para cerrar el menú al hacer clic en cualquier parte */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: 998;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+    }
+    
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    /* Ajustes para el header en móvil */
+    header {
+        padding: 15px 0; /* Haciendo el banner superior más alto en móvil */
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem; /* Letras más grandes en móvil */
+    }
 }
 
 @media (max-width: 576px) {
     .hero {
-        padding: 120px 20px 80px;
+        padding: 140px 20px 80px; /* Ajustado para el header más alto */
+        margin-top: 85px; /* Ajustado para el header más alto */
     }
     
     .section-title h2 {
@@ -245,8 +615,29 @@ section:nth-child(even) {
     }
     
     .logo h1 {
-        font-size: 0.9rem; /* Ajustado para móvil pequeño */
+        font-size: 1.1rem; /* Ajustado pero sigue siendo más grande */
     }
 }
 
-/* El resto del CSS permanece igual */
+/* Clases de utilidad */
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
