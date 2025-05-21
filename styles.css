@@ -588,18 +588,18 @@ footer {
     
     /* Ajustes para el header en móvil */
     header {
-        padding: 15px 0; /* Haciendo el banner superior más alto en móvil */
+        padding: 20px 0; /* Banner azul marino más alto/ancho en móvil */
     }
     
     .logo h1 {
-        font-size: 1.3rem; /* Letras más grandes en móvil */
+        font-size: 1.5rem; /* Letras aún más grandes en móvil */
     }
 }
 
 @media (max-width: 576px) {
     .hero {
-        padding: 140px 20px 80px; /* Ajustado para el header más alto */
-        margin-top: 85px; /* Ajustado para el header más alto */
+        padding: 150px 20px 80px; /* Ajustado para el header más alto */
+        margin-top: 95px; /* Ajustado para el header más alto */
     }
     
     .section-title h2 {
@@ -615,7 +615,7 @@ footer {
     }
     
     .logo h1 {
-        font-size: 1.1rem; /* Ajustado pero sigue siendo más grande */
+        font-size: 1.3rem; /* Ajustado pero sigue siendo más grande */
     }
 }
 
