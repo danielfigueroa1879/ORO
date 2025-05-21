@@ -43,13 +43,13 @@ body {
     padding: 0;
     color: var(--dark-gray);
     line-height: 1.6;
-    font-weight: 300; /* Texto más ligero en general */
+    font-weight: 200; /* Texto aún más ligero en general */
 }
 
 /* Justificación de texto para todos los párrafos */
 p {
     text-align: justify;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 200; /* Texto aún más ligero */
 }
 
 .container {
@@ -193,6 +193,7 @@ section:nth-child(even) {
     position: relative;
     display: inline-block;
     padding-bottom: 15px;
+    font-weight: 400; /* Menos negrita para títulos principales */
 }
 
 .section-title h2:after {
@@ -237,6 +238,7 @@ section:nth-child(even) {
 .service-content h3 {
     color: var(--primary-color);
     margin-top: 0;
+    font-weight: 400; /* Menos negrita para títulos */
 }
 
 .service-content p {
@@ -258,8 +260,13 @@ section:nth-child(even) {
 
 .about-image img {
     width: 100%;
+    height: auto; /* Mantener proporción */
+    max-width: 300px; /* Limitar tamaño máximo */
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Asegurar que se vea la imagen completa */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Sección Equipo */
@@ -289,6 +296,7 @@ section:nth-child(even) {
 .team-info h3 {
     margin-top: 0;
     color: var(--primary-color);
+    font-weight: 400; /* Menos negrita para títulos */
 }
 
 .team-info p {
@@ -377,6 +385,7 @@ section:nth-child(even) {
 .contact-info h3 {
     color: var(--secondary-color);
     margin-top: 0;
+    font-weight: 400; /* Menos negrita */
 }
 
 .contact-detail {
@@ -465,6 +474,7 @@ section:nth-child(even) {
 .blog-content h3 {
     margin-top: 0;
     color: var(--primary-color);
+    font-weight: 400; /* Menos negrita */
 }
 
 /* Pie de Página */
@@ -647,15 +657,22 @@ footer {
         font-size: 1.1rem; /* Título más pequeño específicamente en celular */
     }
     
+    /* Asegurar que en móvil siga siendo legible */
+@media (max-width: 768px) {
     /* Texto general más pequeño y menos negrilla en móvil */
     body {
         font-size: 0.95rem;
-        font-weight: 300; /* Menos negrilla en todo el texto */
+        font-weight: 300; /* Mantener peso 300 para móvil (mayor legibilidad) */
     }
     
-    p {
+    p, .service-content p, 
+    .about-content div p, 
+    .testimonial p,
+    .blog-content p,
+    .footer-col p,
+    .contact-detail p {
         font-size: 0.95rem;
-        font-weight: 300; /* Menos negrilla en párrafos */
+        font-weight: 300; /* Mantener peso 300 para móvil */
     }
     
     /* Centrado de la sección equipo en móvil */
@@ -709,10 +726,13 @@ footer {
         font-size: 0.9rem; /* Más pequeño para celulares muy pequeños */
     }
     
+@media (max-width: 576px) {
+    /* ... otros estilos ... */
+    
     /* Texto aún más pequeño en celulares muy pequeños */
     body {
         font-size: 0.9rem;
-        font-weight: 300; /* Menos negrilla */
+        font-weight: 300; /* Mantener peso 300 para móvil */
     }
     
     p, .service-content p, 
@@ -722,7 +742,7 @@ footer {
     .team-info p,
     .contact-detail p {
         font-size: 0.9rem;
-        font-weight: 300; /* Menos negrilla */
+        font-weight: 300; /* Mantener peso 300 para móvil */
     }
     
     /* Copyright aún más pequeño en celulares muy pequeños */
