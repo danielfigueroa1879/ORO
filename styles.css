@@ -1,10 +1,15 @@
-/* Variables globales */
+.about-content div p {
+    text-align: justify;
+}.footer-col p {
+    text-align: justify;
+}/* Variables globales */
 :root {
     --primary-color: #283593;
     --secondary-color: #D4AF37;
     --white: #ffffff;
     --light-gray: #f5f5f5;
     --dark-gray: #333333;
+    --font-family: 'Poppins', sans-serif;
 }
 
 /* Reset básico */
@@ -16,11 +21,16 @@
 
 /* Base */
 body {
-    font-family: Roboto, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: var(--dark-gray);
     line-height: 1.6;
+}
+
+/* Justificación de texto para todos los párrafos */
+p {
+    text-align: justify;
 }
 
 .container {
@@ -210,6 +220,10 @@ section:nth-child(even) {
     margin-top: 0;
 }
 
+.service-content p {
+    text-align: justify;
+}
+
 /* Sección Sobre Nosotros */
 .about {
     padding: 80px 0;
@@ -283,6 +297,7 @@ section:nth-child(even) {
 .testimonial p {
     font-style: italic;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .testimonial-author {
@@ -378,7 +393,7 @@ section:nth-child(even) {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-family: inherit;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group textarea {
@@ -412,6 +427,10 @@ section:nth-child(even) {
 
 .blog-content {
     padding: 20px;
+}
+
+.blog-content p {
+    text-align: justify;
 }
 
 .blog-date {
