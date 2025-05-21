@@ -521,16 +521,18 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(60, 60, 80, 0.4); /* Fondo gris azulado ultra transparente */
+        background-color: rgba(60, 60, 80, 0.35); /* Fondo gris azulado ultra transparente con mayor desenfoque */
         padding: 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         z-index: 999;
-        backdrop-filter: blur(1.5px); /* Efecto de desenfoque mínimo */
+        backdrop-filter: blur(8px); /* Mayor efecto de desenfoque para el fondo */
+        -webkit-backdrop-filter: blur(8px); /* Para soporte en Safari */
     }
     
     nav ul.show {
         display: flex;
-        animation: fadeIn 0.3s ease-out;
+        animation: fadeIn 0.2s ease-out;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     }
     
     nav ul li {
