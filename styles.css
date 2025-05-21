@@ -45,6 +45,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -63,7 +64,13 @@ header {
     color: var(--white);
 }
 
-/* Menú móvil */
+/* Navegación principal */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -88,15 +95,17 @@ nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+/* Botón de menú móvil */
 .mobile-menu-btn {
     display: none;
     background: none;
     border: none;
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     padding: 5px 10px;
     z-index: 1001;
+    margin-left: auto;
 }
 
 /* Sección Hero */
@@ -501,44 +510,46 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
     .mobile-menu-btn {
         display: block;
+    }
+    
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
     }
     
     nav ul {
         display: none;
         flex-direction: column;
-        position: fixed;
-        top: 80px;
-        left: 0;
         width: 100%;
         background-color: var(--primary-color);
-        padding: 20px;
+        padding: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        max-height: calc(100vh - 80px);
-        overflow-y: auto;
+        margin-top: 0;
     }
     
     nav ul.show {
         display: flex;
-        animation: slideDown 0.3s ease-in-out;
-    }
-    
-    @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
     }
     
     nav ul li {
-        margin: 10px 0;
+        margin: 0;
         width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     nav ul li a {
         display: block;
-        padding: 10px 15px;
-        border-radius: 5px;
+        padding: 15px;
+        font-size: 1.1rem;
     }
     
     nav ul li a:hover {
