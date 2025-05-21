@@ -293,86 +293,63 @@
 
     <!-- Scripts -->
     <script>
-        // Menú móvil
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            var menu = document.getElementById('mainMenu');
-            menu.classList.toggle('show');
+        // Script simplificado para el menú móvil
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.getElementById('menuToggle');
+            var mainMenu = document.getElementById('mainMenu');
             
-            // Añadir listener para cerrar el menú cuando se hace clic en un enlace
-            var menuLinks = menu.querySelectorAll('a');
-            for (var i = 0; i < menuLinks.length; i++) {
-                menuLinks[i].addEventListener('click', function() {
-                    // Pequeño retraso para permitir la navegación antes de cerrar el menú
-                    setTimeout(function() {
-                        menu.classList.remove('show');
-                    }, 300);
-                });
-            }
-        });
-        
-        // Actualizar año actual en el copyright
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Validación básica del formulario
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            let valid = true;
-            const requiredFields = this.querySelectorAll('[required]');
-            
-            // Verificar campos requeridos
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    field.classList.add('error');
-                    valid = false;
-                } else {
-                    field.classList.remove('error');
-                }
+            // Evento para mostrar/ocultar el menú móvil
+            menuButton.addEventListener('click', function() {
+                mainMenu.classList.toggle('show');
             });
             
-            // Validar formato de correo electrónico
-            const emailField = document.getElementById('email');
-            if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
-                emailField.classList.add('error');
-                valid = false;
+            // Evento para cerrar el menú al hacer clic en un enlace
+            var links = mainMenu.getElementsByTagName('a');
+            
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function() {
+                    mainMenu.classList.remove('show');
+                });
             }
             
-            if (valid) {
-                // En una implementación real, aquí enviarías los datos al servidor
-                alert('Mensaje enviado con éxito. Nos contactaremos a la brevedad.');
-                this.reset();
-            } else {
-                alert('Por favor, complete todos los campos requeridos correctamente.');
-            }
-        });
-        
-        // Cargar información de contacto (simulado - esto se reemplazará con datos reales)
-        function updateContactInfo() {
-            // Aquí normalmente cargarías los datos desde una API o archivo de configuración
-            // Por ahora, simplemente dejamos los espacios marcados como pendientes
-            // document.getElementById('phone-placeholder').textContent = "+56 9 1234 5678";
-            // document.getElementById('email-placeholder').textContent = "contacto@seguridadoro.cl";
-            // document.getElementById('address-placeholder').textContent = "Av. Principal 123, La Serena, Chile";
-        }
-        
-        // Ejecutar cuando el DOM esté cargado
-        document.addEventListener('DOMContentLoaded', function() {
-            updateContactInfo();
+            // Actualizar año actual en el copyright
+            document.getElementById('current-year').textContent = new Date().getFullYear();
             
-            // Lazy loading para imágenes fuera de la vista inicial
-            if ('IntersectionObserver' in window) {
-                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const image = entry.target;
-                            image.src = image.dataset.src || image.src;
-                            observer.unobserve(image);
+            // Validación básica del formulario
+            var contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    let valid = true;
+                    const requiredFields = this.querySelectorAll('[required]');
+                    
+                    // Verificar campos requeridos
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            field.classList.add('error');
+                            valid = false;
+                        } else {
+                            field.classList.remove('error');
                         }
                     });
-                });
-                
-                lazyImages.forEach(image => {
-                    imageObserver.observe(image);
+                    
+                    // Validar formato de correo electrónico
+                    const emailField = document.getElementById('email');
+                    if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                        emailField.classList.add('error');
+                        valid = false;
+                    }
+                    
+                    if (valid) {
+                        // En una implementación real, aquí enviarías los datos al servidor
+                        alert('Mensaje enviado con éxito. Nos contactaremos a la brevedad.');
+                        this.reset();
+                    } else {
+                        alert('Por favor, complete todos los campos requeridos correctamente.');
+                    }
                 });
             }
         });
+    </script>
+</body>
+</html>
