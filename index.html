@@ -387,7 +387,6 @@
             // Añadir el botón al body
             document.body.appendChild(scrollToTopBtn);
             
-            let scrollTimer = null;
             let hideTimer = null;
             let isVisible = false;
             
@@ -396,12 +395,16 @@
                 if (!isVisible && window.innerWidth <= 768) { // Solo en móvil
                     scrollToTopBtn.classList.remove('hide');
                     scrollToTopBtn.classList.add('show');
+                    scrollToTopBtn.style.display = 'flex';
                     isVisible = true;
                     
                     // Limpiar el timer anterior si existe
                     if (hideTimer) {
                         clearTimeout(hideTimer);
                     }
+                    
+                    // Programar ocultamiento automático
+                    scheduleHide();
                 }
             }
             
@@ -441,34 +444,16 @@
                 }
                 
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const documentHeight = document.documentElement.scrollHeight;
-                const windowHeight = window.innerHeight;
                 
-                // Mostrar el botón cuando el usuario haga scroll hacia abajo (más de 300px)
+                // Mostrar el botón SIEMPRE que el usuario haga scroll hacia abajo (más de 300px)
                 if (scrollTop > 300) {
-                    showButton();
-                    scheduleHide();
-                }
-                
-                // Si está cerca del final de la página, mostrar y programar ocultamiento
-                if (scrollTop + windowHeight >= documentHeight - 100) {
-                    showButton();
-                    scheduleHide();
-                }
-                
-                // Limpiar el timer de scroll anterior
-                if (scrollTimer) {
-                    clearTimeout(scrollTimer);
-                }
-                
-                // Programar ocultamiento después de parar de hacer scroll
-                scrollTimer = setTimeout(() => {
-                    if (scrollTop > 300) {
-                        scheduleHide();
-                    } else {
+                    showButton(); // Esto mostrará el botón cada vez que se haga scroll
+                } else {
+                    // Ocultar inmediatamente si está en la parte superior
+                    if (isVisible) {
                         hideButton();
                     }
-                }, 150);
+                }
             });
             
             // Evento de clic en el botón
