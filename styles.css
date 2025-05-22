@@ -1,24 +1,10 @@
-/* Ajustes para las imágenes de la galería en móvil */
-@media (max-width: 768px) {
-    .gallery-item {
-        height: 200px; /* Altura reducida en móvil */
-    }
-    
-    .gallery-item img {
-        object-fit: contain; /* Asegura que se vea la imagen completa */
-        padding: 10px; /* Añade un poco de espacio alrededor */
-    }
-}    /* Ajustes para el texto del copyright en móvil */
-    .copyright p {
-        font-size: 0.75rem; /* Letra más pequeña en el copyright */
-        font-weight: 300;
-    }.about-content div p {
+.about-content div p {
     text-align: justify;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 200; /* Texto aún más ligero */
 }
 .footer-col p {
     text-align: justify;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 200; /* Texto aún más ligero */
 }
 /* Variables globales */
 :root {
@@ -243,7 +229,7 @@ section:nth-child(even) {
 
 .service-content p {
     text-align: justify;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 200; /* Texto aún más ligero */
 }
 
 /* Sección Sobre Nosotros */
@@ -330,7 +316,7 @@ section:nth-child(even) {
     font-style: italic;
     margin-bottom: 20px;
     text-align: justify;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 200; /* Texto aún más ligero */
 }
 
 .testimonial-author {
@@ -465,7 +451,7 @@ section:nth-child(even) {
 
 .blog-content p {
     text-align: justify;
-    font-weight: 300; /* Texto más ligero */
+    font-weight: 200; /* Texto aún más ligero */
 }
 
 .blog-date {
@@ -497,9 +483,6 @@ footer {
 
 .footer-col h3 {
     color: var(--secondary-color);
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: a(--secondary-color);
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -556,6 +539,91 @@ footer {
     text-align: center; /* Asegurar que el texto esté centrado */
     width: 100%; /* Ocupar todo el ancho disponible */
     margin: 0 auto; /* Centrar el bloque */
+}
+
+/* Botón de scroll hacia arriba - Solo para móvil */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-to-top.show {
+    display: flex;
+    animation: fadeInUp 0.3s ease;
+}
+
+.scroll-to-top.hide {
+    animation: fadeOutDown 0.3s ease;
+}
+
+/* Solo mostrar en dispositivos móviles */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        display: none; /* Se mostrará con JavaScript */
+    }
+}
+
+/* Asegurar que no aparezca en desktop */
+@media (min-width: 769px) {
+    .scroll-to-top {
+        display: none !important;
+    }
+}
+
+/* Animaciones para el botón */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Ajustes para las imágenes de la galería en móvil */
+@media (max-width: 768px) {
+    .gallery-item {
+        height: 200px; /* Altura reducida en móvil */
+    }
+    
+    .gallery-item img {
+        object-fit: contain; /* Asegura que se vea la imagen completa */
+        padding: 10px; /* Añade un poco de espacio alrededor */
+    }
 }
 
 /* Media Queries - MENÚ MÓVIL MEJORADO */
@@ -662,7 +730,6 @@ footer {
     }
     
     /* Asegurar que en móvil siga siendo legible */
-@media (max-width: 768px) {
     /* Texto general más pequeño y menos negrilla en móvil */
     body {
         font-size: 0.95rem;
@@ -698,13 +765,13 @@ footer {
         font-size: 0.95rem;
     }
     
-    .service-content p, 
-    .about-content div p, 
-    .testimonial p,
-    .blog-content p,
-    .contact-detail p {
-        font-size: 0.95rem; /* Texto un poco más pequeño */
-        font-weight: 300; /* Menos negrilla en todos los textos */
+    /* Ajustes para el texto del copyright en móvil */
+    .copyright p {
+        font-size: 0.75rem; /* Letra más pequeña en el copyright */
+        font-weight: 300;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
@@ -729,9 +796,6 @@ footer {
     .logo h1 {
         font-size: 0.9rem; /* Más pequeño para celulares muy pequeños */
     }
-    
-@media (max-width: 576px) {
-    /* ... otros estilos ... */
     
     /* Texto aún más pequeño en celulares muy pequeños */
     body {
